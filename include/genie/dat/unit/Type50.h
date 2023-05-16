@@ -61,6 +61,7 @@ public:
   std::vector<float> GraphicDisplacement = {0, 0, 0};
 
   uint8_t BlastAttackLevel = 0;
+  float BlastDamage = 0;
   float MinRange = 0;
   float AccuracyDispersion = 0;
   int16_t AttackGraphic = -1;

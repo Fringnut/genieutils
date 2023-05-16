@@ -91,6 +91,11 @@ void Type50::serializeObject(void)
     serialize<float>(DisplayedRange);
     serialize<float>(DisplayedReloadTime);
   }
+
+  if (gv >= GV_C20)
+  { 
+    serialize<float>(BlastDamage);
+  }
 }
 
 }
