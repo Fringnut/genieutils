@@ -340,7 +340,7 @@ std::string LangFile::convert(iconv_t cd, std::string input)
 
   while (cd != (iconv_t)-1 && inleft > 0 && iconv_value == 0)
   {
-    iconv_value = iconv(cd, &inptr, &inleft, &outptr, &outleft);
+    iconv_value = iconv(cd, (char**)&inptr, &inleft, &outptr, &outleft);
 
     if (iconv_value == (size_t)-1)
     {
