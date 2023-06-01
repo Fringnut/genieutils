@@ -167,10 +167,12 @@ if(STATIC_COMPILE)
   add_library(${Genieutils_LIBRARY} STATIC ${FILE_SRC} ${LANG_SRC} ${DAT_SRC} 
                                     ${RESOURCE_SRC} ${UTIL_SRC} ${SCRIPT_SRC} )
   target_link_libraries(${Genieutils_LIBRARY} ${Boost_LIBRARIES} ${ZLIB_LIBRARIES} ${ICONV_LIBRARIES})
+  target_include_directories(${Genieutils_LIBRARY} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 else()
   add_library(${Genieutils_LIBRARY} SHARED ${FILE_SRC} ${LANG_SRC} ${DAT_SRC} 
                                     ${RESOURCE_SRC} ${UTIL_SRC} ${SCRIPT_SRC} )
   target_link_libraries(${Genieutils_LIBRARY} ${ZLIB_LIBRARIES} ${LZ4_LIBRARIES} ${Boost_LIBRARIES} ${ICONV_LIBRARIES})
+  target_include_directories(${Genieutils_LIBRARY} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 endif(STATIC_COMPILE)
 
 #add_executable(main main.cpp)
