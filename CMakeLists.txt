@@ -13,6 +13,8 @@ project(genieutils)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake/)
 #set(CMAKE_CXX_FLAGS "-std=gnu++0x")
 
+SET(STATIC_COMPILE ON)
+
 if(STATIC_COMPILE)
   set(Boost_USE_STATIC_LIBS        ON)
   #set(Boost_USE_STATIC_RUNTIME     ON)
